@@ -102,7 +102,7 @@ boton.addEventListener("click", () => {
 });
 
 async function avisoDeTasas() {
-await new Promise(resolve => setTimeout(resolve, 5000)); // Espera 5000 milisegundos (5 segundos)
+await new Promise(resolve => setTimeout(resolve, 5000));
 Swal.fire('Aprovecha nuestras tasas rebajadas, apurate!')
 }
 avisoDeTasas();
