@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotizador de Préstamos Bancarios</title>
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Cotizador de Préstamos Bancarios</h1>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+    <label for="monto">Cantidad de dinero:</label>
+    <input type="number" id="monto" placeholder="Ingrese la cantidad de dinero" required>
+    <label for="anhos">Plazo en años:</label>
+    <input type="number" id="anhos" placeholder="Ingrese el plazo en años" required>
+    <label for="tipo">Tipo de crédito:</label>
+    <select id="tipo">
+      <option value="hipotecario">Hipotecario</option>
+      <option value="consumo">Consumo</option>
+    </select>
+
+    <button id="boton" onclick="calcularCuotas()">Calcular</button>
+    <div id="resultado"></div>
+
+    <div id="solicitudesAnteriores"></div>
+
+  </div>
+  <script src="./JS/script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
