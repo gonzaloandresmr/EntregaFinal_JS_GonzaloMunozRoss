@@ -101,41 +101,8 @@ boton.addEventListener("click", () => {
   }).showToast();
 });
 
-// Función asincrónica que espera 5 segundos
-async function newsletter() {
-  await new Promise(resolve => setTimeout(resolve, 5000)); // Espera 5000 milisegundos (5 segundos)
-  
-  Swal.fire({
-    title: 'Ingresa tu e-mail y recibe novedades',
-    input: 'text',
-    inputAttributes: {
-      autocapitalize: 'off'
-    },
-    showCancelButton: true,
-    confirmButtonText: 'Enviar',
-    showLoaderOnConfirm: true,
-    preConfirm: (login) => {
-      return fetch(`//api.github.com/users/${login}`)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(response.statusText)
-          }
-          return response.json()
-        })
-        .catch(error => {
-          Swal.showValidationMessage(
-            `Request failed: ${error}`
-          )
-        })
-    },
-    allowOutsideClick: () => !Swal.isLoading()
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire({
-        title: `${result.value.login}'s avatar`,
-        imageUrl: result.value.avatar_url
-      });
-    }
-  });
+async function avisoDeTasas() {
+await new Promise(resolve => setTimeout(resolve, 5000)); // Espera 5000 milisegundos (5 segundos)
+Swal.fire('Aprovecha nuestras tasas rebajadas, apurate!')
 }
-newsletter();
+avisoDeTasas();
